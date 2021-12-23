@@ -4,6 +4,10 @@ class RoomsController < ApplicationController
 
   end
 
+  def new
+    @room = Room.new
+  end
+
   def create
     @room = Room.new(room_params)
     if @room.save
